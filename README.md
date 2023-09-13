@@ -10,6 +10,23 @@ This is a solution to the dockerized solutions challenge on https://hackattic.co
 + Map the IP address of the VM to the domain name as an A Record
 + Install docker on the VM
 
+## **TLDR**
+1. **STEP1** 
++ Create certificate folders 
++ Create and configure Docker Registry
++ Retrieve challenge credentials
+
+2. **Push the Image**
++ Initiate the push by making a POST request to `/_/push/<trigger_token>`, and include the `registry_host` within the JSON payload.
+
+3. **Obtain the Solution:**
++ Fetch the uploaded image from your registry.
++ Set the `IGNITION_KEY` environment variable using the value given in the problem JSON.
++ Launch the container with the image you've fetched.
+
+4. **Submit the Solution**
++ Provide the solution by making a POST request to `/challenges/dockerized_solutions/solve`, and incorporate the secret key, which the container returned, into the JSON payload.
+
 ### **STEP 1:**
 **Create certificate storage folders**
 
