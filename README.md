@@ -49,10 +49,10 @@ gcloud compute scp PATH_TO_FOLDER_CONTAINING_CERTS_AND_ PRIVATE_KEY/* VM_NAME:HO
 <pre>
 sudo mkdir -p /etc/docker/certs.d/$DOMAIN_NAME:443
 sudo cp HOMEDIR/test/certs/domain.crt /etc/docker/certs.d/$DOMAIN_NAME:443/
-sudo cp /home/Home/test/certs/domain.cert /etc/docker/certs.d/$DOMAIN_NAME:443/
-sudo cp /home/Home/test/certs/domain.key /etc/docker/certs.d/$DOMAIN_NAME:443/
-sudo cp /home/Home/test/certs/SubCA.crt /etc/docker/certs.d/$DOMAIN_NAME:443/
-sudo cp /home/Home/test/certs/Root_RSA_CA.crt /etc/docker/certs.d/$DOMAIN_NAME:443/
+sudo cp HOMEDIR/test/certs/domain.cert /etc/docker/certs.d/$DOMAIN_NAME:443/
+sudo cp HOMEDIR/test/certs/domain.key /etc/docker/certs.d/$DOMAIN_NAME:443/
+sudo cp HOMEDIR/test/certs/SubCA.crt /etc/docker/certs.d/$DOMAIN_NAME:443/
+sudo cp HOMEDIR/test/certs/Root_RSA_CA.crt /etc/docker/certs.d/$DOMAIN_NAME:443/
 sudo systemctl restart docker
 </pre>
 
